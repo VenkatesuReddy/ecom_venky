@@ -71,9 +71,22 @@ dimension: full_name {
   type: string
   sql: concat(${first_name}," ", ${last_name});;
 }
+dimension: fullname_legnth{
+  type: number
+  sql: legnth(${full_name} ;;
+}
+dimension: age_tier{
+  type: tier
+  sql: ${age} ;;
+  tiers: [1, 9, 10, 19, 20, 29, 30, 39, 40, 49, 50, 59, 60, 69, 70, 79, 80, 89,  90, 99]
+}
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+  measure: avg_userage {
+    type: average
+    sql: ${age} ;;
   }
 
   # ----- Sets of fields for drilling ------
