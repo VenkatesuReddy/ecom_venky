@@ -49,6 +49,7 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
     value_format_name: usd_0
     value_format: "$#.00;($#.00)"
+    hidden: yes
   }
 
   measure: count {
