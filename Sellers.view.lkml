@@ -1,4 +1,4 @@
- view: buyers{
+ view: sellers{
     derived_table: {
       explore_source: sellers {
         column: id {
